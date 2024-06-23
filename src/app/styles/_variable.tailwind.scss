@@ -1,0 +1,17 @@
+.title-section {
+  @apply text-white text-5xl font-light;
+}
+.subtitle-section {
+  @apply text-gray-200 text-xl font-thin;
+}
+
+.title-section-inners{
+  @apply text-white text-xl font-medium
+}
+.subtitle-section-inners{
+  @apply text-gray-200 text-md  font-light
+}
+
+.footer-links{
+  @apply subtitle-section-inners hover:text-gray-100 duration-150 ease-in
+}
