@@ -1,17 +1,24 @@
-.title-section {
-  @apply text-white text-5xl font-light;
+.title {
+  @apply text-gray-100 text-4xl font_neue font-semibold;
 }
-.subtitle-section {
-  @apply text-gray-200 text-xl font-thin;
+.subtitle {
+  @apply text-gray-100 text-base font-normal font_golos;
+}
+.arrow-swiper_horizontal{
+  @apply border border-dark-400 rounded-full py-2.5 px-4 hover:cursor-pointer hover:scale-105 ease-in duration-100
+}
+.error-text{
+  @apply text-[12px] text-red-500 mt-2
 }
 
-.title-section-inners{
-  @apply text-white text-xl font-medium
-}
-.subtitle-section-inners{
-  @apply text-gray-200 text-md  font-light
-}
-
-.footer-links{
-  @apply subtitle-section-inners hover:text-gray-100 duration-150 ease-in
-}
+//
+//.title-section-inners{
+//  @apply text-white text-xl font-medium
+//}
+//.subtitle-section-inners{
+//  @apply text-gray-200 text-md  font-light
+//}
+//
+//.footer-links{
+//  @apply subtitle-section-inners hover:text-gray-100 duration-150 ease-in
+//}

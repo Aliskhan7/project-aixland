@@ -1,0 +1,34 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.cdnfonts.com/css/neue-haas-grotesk-display-pro?styles=82961,82963');
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400..900&display=swap');
+
+$font_Neue: 'Neue Haas Grotesk Display Pro', sans-serif;
+$font_Golos: "Golos Text", sans-serif;
+
+@import "variable.tailwind";
+
+html{
+  background-color: #09090A;
+}
+body{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font_Golos;
+  font-weight: 400;
+}
+
+.font_golos{
+  font-family: $font_Golos;
+}
+.font_neue{
+  font-family: $font_Neue;
+}
+.line{
+  width: 100%;
+  background-color: #272729;
+  height: 1px;
+  border: none;
+}
