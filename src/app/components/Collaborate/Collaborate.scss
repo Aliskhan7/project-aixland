@@ -1,0 +1,29 @@
+.collaborate{
+  position: relative;
+  &-swiper{
+    .swiper-slide{
+      max-width: 637px;
+      width: 100%;
+      img{
+        width: 100% !important;
+      }
+    }
+  }
+  &-swiper_inner{
+    backdrop-filter: blur(12px);
+    background: rgba(23, 23, 26, 0.8);
+    padding: 32px;
+    border-radius: 32px;
+    border: 1px solid #272729;
+
+  }
+  &-dot{
+    color: #FFA600;
+    font-size: 36px;
+  }
+
+}
+.animate-collaborate{
+  position: absolute;
+  margin-top: -550px;
+}

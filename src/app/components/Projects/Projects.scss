@@ -1,0 +1,18 @@
+.projects-lines{
+  position: relative;
+  height: 100%;
+  &:before{
+    content: '';
+    margin: 29px 0;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../../../../public/assets/images/line-small.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position:  center;
+    z-index: -1;
+  }
+}

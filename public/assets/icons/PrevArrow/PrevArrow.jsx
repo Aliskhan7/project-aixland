@@ -1,6 +1,6 @@
 import React from "react";
 
-const PrewArrow = () => {
+const PrevArrow = () => {
   return (
     <svg
       width="32"
@@ -19,4 +19,4 @@ const PrewArrow = () => {
   );
 };
 
-export default PrewArrow;
+export default PrevArrow;
