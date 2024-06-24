@@ -38,7 +38,7 @@ const Features = () => {
       whileInView="visible"
       className="pt-[70px]"
     >
-      <div className="xl:container mx-auto">
+      <div className="xl:container mx-auto px-5 lg:px-0">
         <div className="flex gap-x-3 items-center mb-[93px]">
           <Image src={logoSmall} width={60} alt="logo" />
           <hr className="line" />

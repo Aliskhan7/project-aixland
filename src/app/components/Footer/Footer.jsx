@@ -20,7 +20,7 @@ const Footer = () => {
         </div>
 
         <div className="flex justify-between items-start">
-          <div className="flex flex-col justify-between h-[100%]">
+          <div className="hidden sm:flex flex-col justify-between h-[100%]">
             <div className="flex gap-x-[89px]">
               <div className="flex flex-col">
                 <a href="#" className="text-sm decoration-0 text-dark-200">

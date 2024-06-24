@@ -56,7 +56,7 @@ const Form = () => {
   return (
     <form
       onSubmit={handleSubmit(onSubmit)}
-      className="form flex flex-col gap-y-6"
+      className="form z-20 flex flex-col gap-y-6"
     >
       <div>
         <input

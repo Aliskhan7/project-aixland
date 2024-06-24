@@ -22,7 +22,7 @@ const Projects = () => {
     <motion.section
       initial="hidden"
       whileInView="visible"
-      className="container overflow-hidden mx-auto mb-36 mt-[70px]"
+      className="container px-5 md:px-0 overflow-hidden mx-auto mb-36 mt-[70px]"
     >
       <motion.div
         variants={textAnimated}
@@ -40,10 +40,10 @@ const Projects = () => {
             <motion.div
               variants={blocksAnimated}
               key={project.id}
-              className="grid grid-cols-2 gap-x-12"
+              className="grid grid-cols-1 lg:grid-cols-2 gap-x-12 gap-y-4"
             >
               <div
-                className={`${project.id % 2 === 0 ? " order-1" : ""} projects-lines rounded-xl border border-dark-400 bg-[#17171A66] p-[58px]`}
+                className={`${project.id % 2 === 0 ? " order-1 md:order-0" : ""} order-1 md:order-0 projects-lines rounded-xl border border-dark-400 bg-[#17171A66] p-[58px]`}
               >
                 <div className="bg-dark-500 p-8 h-full rounded-xl">
                   <Image src={logoSmall} width={60} alt="logo" />
