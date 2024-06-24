@@ -9,10 +9,35 @@ import "swiper/css/pagination";
 import { Pagination } from "swiper/modules";
 import FeaturesText from "../../../../public/assets/icons/FeaturesText/FeaturesText";
 import { featuresData } from "@/app/components/Features/data";
+import { motion } from "framer-motion";
 
+const textAnimated = {
+  hidden: {
+    y: -300,
+  },
+  visible: {
+    y: 0,
+    transition: { duration: 0.4, delay: 0.2 },
+  },
+};
+const blocksAnimated = {
+  hidden: {
+    y: 0,
+    opacity: 0,
+  },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.5, delay: 0.3 },
+  },
+};
 const Features = () => {
   return (
-    <section className="pt-[70px]">
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      className="pt-[70px]"
+    >
       <div className="xl:container mx-auto">
         <div className="flex gap-x-3 items-center mb-[93px]">
           <Image src={logoSmall} width={60} alt="logo" />
@@ -30,15 +55,22 @@ const Features = () => {
             {featuresData.map((item) => {
               return (
                 <SwiperSlide key={item.id}>
-                  <Image src={item.url} alt="features_img_1" />
-                  <div className="max-w-[330px]">
+                  <Image
+                    variants={textAnimated}
+                    src={item.url}
+                    alt="features_img_1"
+                  />
+                  <motion.div
+                    variants={blocksAnimated}
+                    className="max-w-[330px]"
+                  >
                     <span className="text-gray-100 text-2xl font-medium mb-4">
                       {item.number}
                     </span>
                     <p className="text-dark-200 text-base font-normal">
                       {item.text}
                     </p>
-                  </div>
+                  </motion.div>
                 </SwiperSlide>
               );
             })}
@@ -48,7 +80,7 @@ const Features = () => {
       <div className="animate-features 2xl:container mx-auto flex justify-center">
         <FeaturesText />
       </div>
-    </section>
+    </motion.section>
   );
 };
 
