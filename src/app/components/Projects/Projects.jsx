@@ -10,11 +10,9 @@ import "./Projects.scss";
 export const blocksAnimated = {
   hidden: {
     y: 200,
-    opacity: 0,
   },
   visible: {
     y: 0,
-    opacity: 1,
     transition: { duration: 0.4, delay: 0.2 },
   },
 };
@@ -24,7 +22,7 @@ const Projects = () => {
     <motion.section
       initial="hidden"
       whileInView="visible"
-      className="container mx-auto mb-36 mt-[70px]"
+      className="container overflow-hidden mx-auto mb-36 mt-[70px]"
     >
       <motion.div
         variants={textAnimated}

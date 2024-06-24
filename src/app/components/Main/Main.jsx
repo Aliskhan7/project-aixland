@@ -16,13 +16,11 @@ import "./Main.scss";
 
 const textAnimated = {
   hidden: {
-    y: -200,
-    opacity: 0,
+    y: -500,
   },
   visible: {
     y: 0,
-    opacity: 1,
-    transition: { duration: 0.3 },
+    transition: { duration: 0.3, delay: 0.2 },
   },
 };
 

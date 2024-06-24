@@ -3,14 +3,25 @@ import React, { useEffect, useRef, useState } from "react";
 import "./Benefits.scss";
 import IconPlay from "../../../../public/assets/icons/IconPlay/IconPlay";
 import IconPause from "../../../../public/assets/icons/IconPause/IconPause";
-export const blocksAnimated = {
+import { motion } from "framer-motion";
+
+const blocksAnimated = {
   hidden: {
-    y: 200,
+    y: 10,
     opacity: 0,
+  },
+  visible: (custom) => ({
+    y: 0,
+    opacity: 1,
+    transition: { duration: 0.4, delay: custom * 0.2 },
+  }),
+};
+const textAnimated = {
+  hidden: {
+    y: "-100%",
   },
   visible: {
     y: 0,
-    opacity: 1,
     transition: { duration: 0.4, delay: 0.2 },
   },
 };
@@ -19,6 +30,7 @@ const Benefits = () => {
   const videoRef = useRef(null);
   const buttonRef = useRef(null);
   const [showButton, setShowButton] = useState(true);
+
   const togglePlayPause = () => {
     const video = videoRef.current;
     if (video) {
@@ -75,7 +87,12 @@ const Benefits = () => {
   }, [isPaused]);
 
   return (
-    <section className="pt-[112px] pb-[70px] ">
+    <motion.section
+      initial="hidden"
+      whileInView="visible"
+      viewport={{ amount: 0.3 }}
+      className="pt-[112px] pb-[70px] "
+    >
       <div className="mx-auto benefits">
         {/*<svg*/}
         {/*  className="svg"*/}
@@ -88,7 +105,7 @@ const Benefits = () => {
         {/*  </text>*/}
         {/*</svg>*/}
         {/*<h2 className="benefits-title">Benefits for users</h2>*/}
-        <div className="video-block">
+        <motion.div variants={textAnimated} className="video-block">
           {showButton && (
             <button
               ref={buttonRef}
@@ -100,10 +117,9 @@ const Benefits = () => {
           )}
 
           <video
-            width={858}
             height={480}
             ref={videoRef}
-            className="mx-auto rounded-xl"
+            className="mx-auto max-w-[858px] w-full rounded-xl"
             muted
           >
             <source src="/assets/videos/animation_house.mp4" type="video/mp4" />
@@ -113,26 +129,29 @@ const Benefits = () => {
             />
             Your browser does not support the video tag.
           </video>
-        </div>
-        {/*<video*/}
-        {/*  src="../../../../public/assets/animation_house.mp4"*/}
-        {/*  width={858}*/}
-        {/*  height={480}*/}
-        {/*></video>*/}
+        </motion.div>
       </div>
       <div className="flex gap-x-8 max-w-[858px] mx-auto">
-        <p className="text-sm text-gray-100 font-thin">
+        <motion.p
+          variants={blocksAnimated}
+          custom={1.5}
+          className="text-sm text-gray-100 font-thin font_golos"
+        >
           <span>/ </span> The metaverse as a digital interface is designed to
           combine the physical world of real estate and infrastructure with the
           flexibility and unlimited possibilities of digital space
-        </p>
-        <p className="text-sm text-gray-100 font-thin">
+        </motion.p>
+        <motion.p
+          variants={blocksAnimated}
+          custom={2}
+          className="text-sm text-gray-100 font-thin"
+        >
           <span>/ </span> The platform will remove the spatial and temporal
           barriers associated with real estate management and will allow for
           accurate monitoring and analysis of operational processes in real time
-        </p>
+        </motion.p>
       </div>
-    </section>
+    </motion.section>
   );
 };
 

@@ -15,7 +15,7 @@ const IconPause = () => {
           cy="40"
           r="40"
           fill="url(#paint0_radial_128_3196)"
-          fill-opacity="0.6"
+          fillOpacity="0.6"
         />
         <circle
           cx="40"
@@ -36,9 +36,9 @@ const IconPause = () => {
           width="96"
           height="96"
           filterUnits="userSpaceOnUse"
-          color-interpolation-filters="sRGB"
+          colorInterpolationFilters="sRGB"
         >
-          <feFlood flood-opacity="0" result="BackgroundImageFix" />
+          <feFlood floodOpacity="0" result="BackgroundImageFix" />
           <feGaussianBlur in="BackgroundImageFix" stdDeviation="4" />
           <feComposite
             in2="SourceAlpha"
@@ -60,8 +60,8 @@ const IconPause = () => {
           gradientUnits="userSpaceOnUse"
           gradientTransform="translate(27.4286 18.8571) rotate(69.9739) scale(65.0777)"
         >
-          <stop stop-color="white" stop-opacity="0.9" />
-          <stop offset="1" stop-color="#F5F5F5" stop-opacity="0.7" />
+          <stop stopColor="white" stopOpacity="0.9" />
+          <stop offset="1" stopColor="#F5F5F5" stopOpacity="0.7" />
         </radialGradient>
         <linearGradient
           id="paint1_linear_128_3196"
@@ -71,8 +71,8 @@ const IconPause = () => {
           y2="38.5"
           gradientUnits="userSpaceOnUse"
         >
-          <stop stop-color="white" />
-          <stop offset="1" stop-color="white" stop-opacity="0.1" />
+          <stop stopColor="white" />
+          <stop offset="1" stopColor="white" stopOpacity="0.1" />
         </linearGradient>
       </defs>
     </svg>

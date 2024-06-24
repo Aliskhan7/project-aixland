@@ -15,12 +15,10 @@ import { collaborateData } from "@/app/components/Collaborate/data";
 import "./Collaborate.scss";
 export const textAnimated = {
   hidden: {
-    y: -200,
-    opacity: 0,
+    y: -300,
   },
   visible: {
     y: 0,
-    opacity: 1,
     transition: { duration: 0.4, delay: 0.2 },
   },
 };
