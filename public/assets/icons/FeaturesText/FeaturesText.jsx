@@ -34,7 +34,6 @@ const FeaturesText = () => {
         className="features-text-size"
         x="50%"
         y="50%"
-        fontSize="18.5em"
         fontWeight="bold"
         fill="url(#gradient)"
         fontFamily="Golos Text, sans-serif"

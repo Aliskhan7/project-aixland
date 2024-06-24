@@ -94,44 +94,44 @@ const Benefits = () => {
       className="pt-[112px] pb-[70px] "
     >
       <div className="mx-auto benefits">
-        {/*<svg*/}
-        {/*  className="svg"*/}
-        {/*  width="1300"*/}
-        {/*  height="400"*/}
-        {/*  xmlns="http://www.w3.org/2000/svg"*/}
-        {/*>*/}
-        {/*  <text x="10" y="50" fill="none" stroke="black" strokeWidth="2">*/}
-        {/*    BENEFITS FOR USERS*/}
-        {/*  </text>*/}
-        {/*</svg>*/}
-        {/*<h2 className="benefits-title">Benefits for users</h2>*/}
-        <motion.div variants={textAnimated} className="video-block">
-          {showButton && (
-            <button
-              ref={buttonRef}
-              onClick={togglePlayPause}
-              className="video-block_btn"
-            >
-              {isPaused ? <IconPlay /> : <IconPause />}
-            </button>
-          )}
+        <motion.h2
+          variants={textAnimated}
+          className="2xl:container benefits-title"
+        >
+          Benefits for users
+        </motion.h2>
+        <div className="overflow-hidden container mx-auto px-5">
+          <motion.div variants={textAnimated} className="video-block">
+            {showButton && (
+              <button
+                ref={buttonRef}
+                onClick={togglePlayPause}
+                className="video-block_btn"
+              >
+                {isPaused ? <IconPlay /> : <IconPause />}
+              </button>
+            )}
 
-          <video
-            height={480}
-            ref={videoRef}
-            className="mx-auto max-w-[858px] w-full rounded-xl"
-            muted
-          >
-            <source src="/assets/videos/animation_house.mp4" type="video/mp4" />
-            <source
-              src="/assets/videos/animation_house3.webm"
-              type="video/webm"
-            />
-            Your browser does not support the video tag.
-          </video>
-        </motion.div>
+            <video
+              height={480}
+              ref={videoRef}
+              className="mx-auto max-w-[858px] w-full rounded-xl"
+              muted
+            >
+              <source
+                src="/assets/videos/animation_house.mp4"
+                type="video/mp4"
+              />
+              <source
+                src="/assets/videos/animation_house3.webm"
+                type="video/webm"
+              />
+              Your browser does not support the video tag.
+            </video>
+          </motion.div>
+        </div>
       </div>
-      <div className="flex gap-x-8 max-w-[858px] mx-auto">
+      <div className="flex gap-x-8 px-5 max-w-[858px] mx-auto">
         <motion.p
           variants={blocksAnimated}
           custom={1.5}

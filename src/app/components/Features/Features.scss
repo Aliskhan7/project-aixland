@@ -26,3 +26,12 @@
     height: 12px !important;
   }
 }
+.features-text-size{
+  font-size: calc(140px + 180 * (100vw - 320px) / 1500);
+  @media (max-width: 1200px) {
+    font-size: calc(100px + 100 * (100vw - 320px) / 880);
+  }
+  @media (max-width: 768px) {
+    font-size: calc(100px + 80 * (100vw - 320px) / 880);
+  }
+}

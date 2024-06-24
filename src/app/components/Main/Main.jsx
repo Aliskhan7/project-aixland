@@ -65,7 +65,7 @@ const Main = () => {
         </Button>
       </motion.div>
 
-      <div className="main-bgs flex items-center gap-x-7 max-w-[906px] w-full mx-auto">
+      <div className="main-bgs flex items-center gap-x-7 px-5 md:px-0 max-w-[906px] w-full mx-auto">
         <div className="main-bgs_inner main-bgs_inner__first">
           <Image className="main_bg" src={mainBg_1} alt="mainBg_1" />
           <Image className="number-bg" src={main_num_1} alt="main_num" />
