@@ -30,6 +30,7 @@ const Collaborate = () => {
       initial="hidden"
       whileInView="visible"
       className=" mx-auto pt-[70px] pb-[150px] collaborate"
+      id="partners"
     >
       <motion.div
         variants={textAnimated}

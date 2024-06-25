@@ -1,13 +1,30 @@
 .benefits{
-  margin-bottom: 36px;
   position: relative;
   overflow: hidden;
   &-title{
     text-transform: uppercase;
-    font-size: 8.5em;
     color: #F2F2F2;
     font-weight: bold;
     text-align: center;
+    font-size: calc(60px + 90 * (100vw - 320px) / 1500);
+    @media (max-width: 1200px) {
+      font-size: calc(40px + 50 * (100vw - 320px) / 880);
+    }
+    @media (max-width: 768px) {
+      font-size: calc(40px + 30 * (100vw - 320px) / 880);
+    }
+  }
+  &-list{
+    margin-top: 36px;
+    li{
+      position: relative;
+      &:before{
+        content: '/';
+        position: absolute;
+        left: -18px;
+        top: 0;
+      }
+    }
   }
 }
 .video-block{
