@@ -19,8 +19,8 @@ const Footer = () => {
           <Image src={logoSmall} width={60} alt="logo" />
         </div>
 
-        <div className="flex justify-between items-start">
-          <div className="hidden sm:flex flex-col justify-between h-[100%]">
+        <div className="flex justify-center sm:justify-between items-start mx-auto">
+          <div className="hidden sm:flex flex-col justify-between h-[48vh] ">
             <div className="flex gap-x-[89px]">
               <div className="flex flex-col">
                 <a href="#" className="text-sm decoration-0 text-dark-200">
@@ -43,11 +43,11 @@ const Footer = () => {
                 physical world of real estate and
               </p>
             </div>
+            <div className="text-dark-200  text-[12px] flex justify-evenly">
+              © 2024 Aixland
+            </div>
           </div>
           <Form />
-        </div>
-        <div className="text-dark-200 text-[12px] flex justify-evenly">
-          © 2024 Aixland
         </div>
       </div>
     </footer>

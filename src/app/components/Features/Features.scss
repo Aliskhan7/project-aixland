@@ -27,7 +27,7 @@
   }
 }
 .features-text-size{
-  font-size: calc(140px + 180 * (100vw - 320px) / 1500);
+  font-size: calc(140px + 180 * (100vw - 320px) / 2000);
   @media (max-width: 1200px) {
     font-size: calc(100px + 100 * (100vw - 320px) / 880);
   }

@@ -36,7 +36,7 @@ const Benefits = () => {
       <div className="mx-auto ">
         <motion.h2
           variants={topAnimated}
-          className="2xl:container benefits-title"
+          className="2xl:container mx-auto benefits-title"
         >
           Benefits for users
         </motion.h2>

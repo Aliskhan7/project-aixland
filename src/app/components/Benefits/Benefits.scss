@@ -6,7 +6,7 @@
     color: #F2F2F2;
     font-weight: bold;
     text-align: center;
-    font-size: calc(60px + 90 * (100vw - 320px) / 1500);
+    font-size: calc(60px + 90 * (100vw - 320px) / 2000);
     @media (max-width: 1200px) {
       font-size: calc(40px + 50 * (100vw - 320px) / 880);
     }
