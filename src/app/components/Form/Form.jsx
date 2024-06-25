@@ -37,7 +37,7 @@ const Form = () => {
 
   const onSubmit = (data) => {
     // Логика отправки данных на сервер
-    fetch("/api/send-email", {
+    fetch(" localhost/api/mail/send.php", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",

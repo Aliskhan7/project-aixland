@@ -37,6 +37,7 @@ const Features = () => {
       initial="hidden"
       whileInView="visible"
       className="pt-[70px]"
+      id="features"
     >
       <div className="xl:container mx-auto px-5 lg:px-0">
         <div className="flex gap-x-3 items-center mb-[93px]">

@@ -22,7 +22,8 @@ const Projects = () => {
     <motion.section
       initial="hidden"
       whileInView="visible"
-      className="container px-5 md:px-0 overflow-hidden mx-auto mb-36 mt-[70px]"
+      className="container px-5 md:px-0 overflow-hidden mx-auto pb-36 pt-[70px]"
+      id="projects"
     >
       <motion.div
         variants={textAnimated}

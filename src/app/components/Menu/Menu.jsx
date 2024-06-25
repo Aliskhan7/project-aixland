@@ -10,22 +10,31 @@ const Menu = () => {
           </a>
         </li>
         <li>
-          <a className="hover:text-gray-100 ease-in transition" href="#">
+          <a className="hover:text-gray-100 ease-in transition" href="#benefit">
             Benefits
           </a>
         </li>
         <li>
-          <a className="hover:text-gray-100 ease-in transition" href="#">
+          <a
+            className="hover:text-gray-100 ease-in transition"
+            href="#features"
+          >
             Features
           </a>
         </li>
         <li>
-          <a className="hover:text-gray-100 ease-in transition" href="#">
+          <a
+            className="hover:text-gray-100 ease-in transition"
+            href="#projects"
+          >
             Projects
           </a>
         </li>
         <li>
-          <a className="hover:text-gray-100 ease-in transition" href="#">
+          <a
+            className="hover:text-gray-100 ease-in transition"
+            href="#partners"
+          >
             Partners
           </a>
         </li>

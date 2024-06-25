@@ -51,9 +51,11 @@ const Main = () => {
           </h1>
           <p className="subtitle">
             Aixland - The first global industrial Metaverse, representing an
-            innovative solution for coordinating and managing all types of real
-            estate and infrastructure, taking related operational and business
-            processes to a new level of efficiency and interconnectedness.
+            innovative <br /> solution for coordinating and managing all types
+            of real estate and
+            <br /> infrastructure, taking related operational and business
+            processes <br />
+            to a new level of efficiency and interconnectedness.
           </p>
         </div>
         <Button
