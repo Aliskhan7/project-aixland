@@ -4,10 +4,10 @@ import { Controller, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
 import Button from "@/app/components/UI/Button/Button";
-import Arrow from "../../../../public/assets/icons/Arrow/Arrow";
+import Arrow from "@/../public/assets/icons/Arrow/Arrow";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
-import "./Form.scss";
+import "./FormContact.scss";
 
 const schema = yup.object().shape({
   name: yup.string().required("Name required"),
@@ -25,7 +25,7 @@ const schema = yup.object().shape({
     .required("Consent is required"),
 });
 
-const Form = () => {
+const FormContact = () => {
   const {
     register,
     handleSubmit,
@@ -124,4 +124,4 @@ const Form = () => {
   );
 };
 
-export default Form;
+export default FormContact;

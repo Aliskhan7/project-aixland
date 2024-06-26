@@ -1,6 +1,7 @@
+$wBg: 284px;
+
 .bg-figure{
   position: relative;
-overflow: hidden;
   &:before{
     opacity: .3;
     content: ' ';
@@ -40,33 +41,49 @@ overflow: hidden;
 }
 
 
+.main-bgs{
+  position: relative;
+}
 .main-bgs_inner{
   position: relative;
   overflow: hidden;
-  transition: all ease .4s;
-  &__first{
+  &__0{
     border-bottom-left-radius: 32px;
     border-top-right-radius: 32px;
+    animation: .2s linear 0s running img-little;
+    .image{
+      object-fit: cover;
+      object-position: left;
+    }
     &:hover{
-      transition: all ease .4s;
+      transition: all ease .2s;
       rotate: -1deg;
+      cursor: pointer;
     }
   }
-  &__second{
+  &__1{
     border-top-left-radius: 32px;
     border-top-right-radius: 32px;
-  }
-  &__third{
-    border-top-left-radius: 32px;
-    border-bottom-right-radius: 32px;
-    &:hover{
-      transition: all ease .4s;
-      rotate: 1deg;
+    animation: .2s linear 0s running img-little;
+    .image{
+      object-fit: cover;
+      object-position: -100px;
     }
   }
-
-
-
+  &__2{
+    border-top-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+    animation: .2s linear 0s running img-bigger;
+    .image{
+      object-fit: cover;
+      object-position: -180px;
+    }
+    &:hover{
+      transition: all ease .2s;
+      rotate: 1deg;
+      cursor: pointer;
+    }
+  }
   .main_bg{
     scale: 1;
     transition: all ease .4s;
@@ -77,11 +94,69 @@ overflow: hidden;
   }
   .number-bg{
     position: absolute;
-    z-index: 999;
+    z-index: 1;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 95px;
     height: auto;
+  }
+}
+
+
+.image-block {
+  width: $wBg;
+  height: 466px;
+  cursor: pointer;
+  transition: all ease .2s;
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  .image {
+    width: 100%;
+    height: 466px;
+    display: block;
+    animation:  .2s linear 0s running img-bigger;
+  }
+}
+
+.image-block.expanded {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  animation: .2s linear 0s running img-bigger;
+
+  &.expanded-0{left: 0}
+  &.expanded-1{left: 0}
+  &.expanded-2{right: 0}
+  &.main-bgs_inner__0, &.main-bgs_inner__1, &.main-bgs_inner__2{
+    border-radius: 0;
+    &:hover{
+      rotate: none;
+    }
+  }
+
+  .image{
+    width: 100%;
+  }
+}
+
+@keyframes img-bigger {
+  0% {
+    width: $wBg;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes img-little {
+  0% {
+    width: 100%;
+  }
+  100% {
+    width: $wBg;
   }
 }

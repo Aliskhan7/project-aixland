@@ -17,7 +17,7 @@ const blocksAnimated = {
 };
 const topAnimated = {
   hidden: {
-    y: "-135%",
+    y: "-145%",
   },
   visible: {
     y: 0,
