@@ -5,25 +5,53 @@
     .swiper-slide{
       max-width: 637px;
       width: 100%;
+
+    }
+  }
+  &-swiper{
+    overflow: hidden;
+    &_inner{
+      backdrop-filter: blur(12px);
+      background: rgba(23, 23, 26, 0.8);
+      padding: 32px;
+      border-radius: 32px;
+      border: 1px solid #272729;
+      transition: all ease .4s;
+
+      &:hover{
+        transition: all ease .2s;
+        rotate: -2deg;
+        cursor: pointer;
+
+      }
+    }
+    &_mainBg{
+      width: 100% !important;
+      border-radius: 16px !important;
+      scale: 1;
+      transition: all ease .4s;
+      &:hover{
+        scale: 1.1;
+        transition: all ease .4s;
+      }
+    }
+    &_text{
+      margin-top: 24px;
       img{
-        width: 100% !important;
+        max-width: 160px;
+        width: 100%;
+        height: auto;
+        margin-bottom: 8px;
       }
     }
   }
-  &-swiper_inner{
-    backdrop-filter: blur(12px);
-    background: rgba(23, 23, 26, 0.8);
-    padding: 32px;
-    border-radius: 32px;
-    border: 1px solid #272729;
-
-  }
-  &-dot{
-    color: #FFA600;
-    font-size: 36px;
-  }
-
 }
+.collaborate-swiper_inner:hover .collaborate-swiper_mainBg{
+  scale: 1.1;
+  transition: all ease .4s;
+  border-radius: 16px;
+}
+
 .animate-collaborate{
   position: absolute;
   margin-top: -550px;
