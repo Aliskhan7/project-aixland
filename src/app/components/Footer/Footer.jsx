@@ -3,9 +3,9 @@ import Image from "next/image";
 import Instagram from "@/../public/assets/icons/Instagram/Instagram";
 import Telegram from "@/../public/assets/icons/Telegram/Telegram";
 import Linkedin from "@/../public/assets/icons/Linkedin/Linkedin";
-import Form from "@/app/components/Form/Form";
 import logoSmall from "@/../public/assets/images/logo.svg";
 import "./Footer.scss";
+import FormContact from "@/app/components/UI/FormContact/FormContact";
 
 const Footer = () => {
   return (
@@ -20,7 +20,7 @@ const Footer = () => {
         </div>
 
         <div className="flex justify-center sm:justify-between items-start mx-auto">
-          <div className="hidden sm:flex flex-col justify-between h-[48vh] ">
+          <div className="hidden sm:flex flex-col justify-between h-[72vh] ">
             <div className="flex gap-x-[89px]">
               <div className="flex flex-col">
                 <a href="#" className="text-sm decoration-0 text-dark-200">
@@ -47,7 +47,7 @@ const Footer = () => {
               © 2024 Aixland
             </div>
           </div>
-          <Form />
+          <FormContact />
         </div>
       </div>
     </footer>

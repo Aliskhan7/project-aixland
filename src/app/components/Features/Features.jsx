@@ -6,7 +6,7 @@ import logoSmall from "@/../public/assets/images/logo.svg";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Pagination } from "swiper/modules";
+import { Mousewheel, Pagination } from "swiper/modules";
 import FeaturesText from "../../../../public/assets/icons/FeaturesText/FeaturesText";
 import { featuresData } from "@/app/components/Features/data";
 import { motion } from "framer-motion";
@@ -50,7 +50,10 @@ const Features = () => {
             pagination={{
               clickable: true,
             }}
-            modules={[Pagination]}
+            mousewheel={{
+              releaseOnEdges: true,
+            }}
+            modules={[Pagination, Mousewheel]}
             className="mySwiper"
           >
             {featuresData.map((item) => {

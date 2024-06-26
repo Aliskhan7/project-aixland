@@ -1,18 +1,13 @@
 "use client";
-import React from "react";
+import React, { useState } from "react";
 import Button from "@/app/components/UI/Button/Button";
 import Image from "next/image";
 import flag from "@/../public/assets/icons/flag-germany.svg";
 import metaverse from "@/../public/assets/icons/metaverse.svg";
-import mainBg_1 from "@/../public/assets/images/main-bg_1.png";
-import mainBg_2 from "@/../public/assets/images/main-bg_2.png";
-import mainBg_3 from "@/../public/assets/images/main-bg_3.png";
-import main_num_1 from "@/../public/assets/images/number_1.png";
-import main_num_2 from "@/../public/assets/images/number_2.png";
-import main_num_3 from "@/../public/assets/images/number_3.png";
 import Play from "@/../public/assets/icons/Play/Play";
 import { motion } from "framer-motion";
 import "./Main.scss";
+import { images } from "@/app/components/Main/data";
 
 const textAnimated = {
   hidden: {
@@ -25,11 +20,16 @@ const textAnimated = {
 };
 
 const Main = () => {
+  const [expandedImage, setExpandedImage] = useState(null);
+  const handleImageClick = (index) => {
+    setExpandedImage(expandedImage === index ? null : index);
+  };
+
   return (
     <motion.main
       initial="hidden"
       whileInView="visible"
-      className="container bg-figure mx-auto mb-[160px]"
+      className="container bg-figure mx-auto mb-[160px] overflow-hidden"
     >
       <motion.div
         variants={textAnimated}
@@ -68,18 +68,28 @@ const Main = () => {
       </motion.div>
 
       <div className="main-bgs flex items-center gap-x-7 px-5 md:px-0 max-w-[906px] w-full mx-auto">
-        <div className="main-bgs_inner main-bgs_inner__first">
-          <Image className="main_bg" src={mainBg_1} alt="mainBg_1" />
-          <Image className="number-bg" src={main_num_1} alt="main_num" />
-        </div>
-        <div className="main-bgs_inner main-bgs_inner__second">
-          <Image className="main_bg" src={mainBg_2} alt="mainBg_1" />
-          <Image className="number-bg" src={main_num_2} alt="main_num" />
-        </div>
-        <div className="main-bgs_inner main-bgs_inner__third">
-          <Image className="main_bg" src={mainBg_3} alt="mainBg_1" />
-          <Image className="number-bg" src={main_num_3} alt="main_num" />
-        </div>
+        {images.map((image, index) => (
+          <div className="w-[284px]" key={index}>
+            <div
+              className={`main-bgs_inner  image-block ${expandedImage === index ? `expanded expanded-${index}` : `main-bgs_inner__${index}`}`}
+              onClick={() => handleImageClick(index)}
+            >
+              <Image
+                src={image.img}
+                width={284}
+                height={466}
+                alt={`Image ${index + 1}`}
+                className="image main_bg"
+              />
+
+              <Image
+                className="number-bg"
+                src={image.img_number}
+                alt="main_num"
+              />
+            </div>
+          </div>
+        ))}
       </div>
     </motion.main>
   );
