@@ -47,7 +47,7 @@ const Main = () => {
         </div>
         <div className="text-center mx-auto mb-9">
           <h1 className="title mb-4">
-            Meet the world's first WEB3 Industrial Metanetwork
+            Meet the world&apos;s first WEB3 Industrial Metanetwork
           </h1>
           <p className="subtitle">
             Aixland - The first global industrial Metaverse, representing an

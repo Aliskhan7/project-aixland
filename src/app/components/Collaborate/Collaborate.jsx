@@ -66,11 +66,16 @@ const Collaborate = () => {
             return (
               <SwiperSlide key={item.id}>
                 <div className="collaborate-swiper_inner">
-                  <Image src={item.url} alt="collaborate_img" />
-                  <div>
-                    <h3 className="text-gray-100 text-2xl font-medium mb-2">
-                      {item.title} <span className="collaborate-dot">.</span>
-                    </h3>
+                  <div className="overflow-hidden rounded-2xl">
+                    <Image
+                      src={item.url}
+                      className="collaborate-swiper_mainBg"
+                      alt="collaborate_img"
+                    />
+                  </div>
+
+                  <div className="collaborate-swiper_text">
+                    <Image src={item.img_title} alt="collaborate_img" />
                     <p className="text-gray-100 text-base font-normal">
                       {item.text}
                     </p>
