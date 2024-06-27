@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { Controller, useForm } from "react-hook-form";
 import { yupResolver } from "@hookform/resolvers/yup";
 import * as yup from "yup";
@@ -8,6 +8,7 @@ import Arrow from "@/../public/assets/icons/Arrow/Arrow";
 import PhoneInput from "react-phone-input-2";
 import "react-phone-input-2/lib/style.css";
 import "./FormContact.scss";
+import Alert from "@/app/components/UI/Alert/Alert";
 
 const schema = yup.object().shape({
   name: yup.string().required("Name required"),
@@ -26,6 +27,7 @@ const schema = yup.object().shape({
 });
 
 const FormContact = () => {
+  const [formStatus, setFormStatus] = useState("");
   const {
     register,
     handleSubmit,
@@ -46,10 +48,10 @@ const FormContact = () => {
     })
       .then((response) => response.json())
       .then((data) => {
-        console.log("Success:", data);
+        setFormStatus("Success");
       })
       .catch((error) => {
-        console.error("Error:", error);
+        setFormStatus("Error");
       });
   };
 
@@ -58,6 +60,12 @@ const FormContact = () => {
       onSubmit={handleSubmit(onSubmit)}
       className="form z-20 flex flex-col gap-y-6"
     >
+      {formStatus === "Success" && (
+        <Alert color="Success">Your request has been sent!</Alert>
+      )}
+      {formStatus === "Error" && (
+        <Alert color="Error">There was a sending error</Alert>
+      )}
       <div>
         <input
           type="text"

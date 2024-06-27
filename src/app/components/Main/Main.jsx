@@ -9,13 +9,13 @@ import { motion } from "framer-motion";
 import "./Main.scss";
 import { images } from "@/app/components/Main/data";
 
-const textAnimated = {
+const topAnimated = {
   hidden: {
     y: -500,
   },
   visible: {
     y: 0,
-    transition: { duration: 0.3, delay: 0.2 },
+    transition: { duration: 0.5, delay: 0.4 },
   },
 };
 
@@ -29,11 +29,11 @@ const Main = () => {
     <motion.main
       initial="hidden"
       whileInView="visible"
-      className="container bg-figure mx-auto mb-[160px] overflow-hidden"
+      className="container bg-figure mx-auto mb-[35px] sm:mb-[160px] overflow-hidden"
     >
       <motion.div
-        variants={textAnimated}
-        className="mx-auto  max-w-[650px] w-full my-[70px]"
+        variants={topAnimated}
+        className="mx-auto max-w-[427px] sm:max-w-[650px] w-full my-[70px]"
       >
         <div className="flex items-center gap-x-3 mb-4 justify-center">
           <div className="flex items-center gap-x-2  py-2 px-3 border border-dark-400 rounded-full">
@@ -51,11 +51,9 @@ const Main = () => {
           </h1>
           <p className="subtitle">
             Aixland - The first global industrial Metaverse, representing an
-            innovative <br /> solution for coordinating and managing all types
-            of real estate and
-            <br /> infrastructure, taking related operational and business
-            processes <br />
-            to a new level of efficiency and interconnectedness.
+            innovative solution for coordinating and managing all types of real
+            estate and infrastructure, taking related operational and business
+            processes to a new level of efficiency and interconnectedness.
           </p>
         </div>
         <Button
@@ -67,11 +65,11 @@ const Main = () => {
         </Button>
       </motion.div>
 
-      <div className="main-bgs flex items-center gap-x-7 px-5 md:px-0 max-w-[906px] w-full mx-auto">
+      <div className="main-bgs flex items-center flex-col lg:flex-row gap-y-[17px] gap-x-7 px-5 md:px-0 max-w-[906px] w-full mx-auto">
         {images.map((image, index) => (
-          <div className="w-[284px]" key={index}>
+          <div className="w-full lg:w-[284px]" key={index}>
             <div
-              className={`main-bgs_inner  image-block ${expandedImage === index ? `expanded expanded-${index}` : `main-bgs_inner__${index}`}`}
+              className={`main-bgs_inner image-block ${expandedImage === index ? `expanded expanded-${index}` : `main-bgs_inner__${index}`}`}
               onClick={() => handleImageClick(index)}
             >
               <Image

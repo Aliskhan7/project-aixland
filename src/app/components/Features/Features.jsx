@@ -11,9 +11,9 @@ import FeaturesText from "../../../../public/assets/icons/FeaturesText/FeaturesT
 import { featuresData } from "@/app/components/Features/data";
 import { motion } from "framer-motion";
 
-const textAnimated = {
+const topAnimated = {
   hidden: {
-    y: -300,
+    y: "-145%",
   },
   visible: {
     y: 0,
@@ -53,20 +53,25 @@ const Features = () => {
             mousewheel={{
               releaseOnEdges: true,
             }}
+            speed={700}
+            viewport={{ amount: 0.4 }}
             modules={[Pagination, Mousewheel]}
             className="mySwiper"
           >
             {featuresData.map((item) => {
               return (
                 <SwiperSlide key={item.id}>
-                  <Image
-                    variants={textAnimated}
-                    src={item.url}
-                    alt="features_img_1"
-                  />
+                  <motion.div variants={topAnimated}>
+                    <Image
+                      className="features-slide-img"
+                      src={item.url}
+                      alt="features_img_1"
+                    />
+                  </motion.div>
+
                   <motion.div
                     variants={blocksAnimated}
-                    className="max-w-[330px]"
+                    className="max-w-[330px] ml-7 sm:ml-0"
                   >
                     <span className="text-gray-100 text-2xl font-medium mb-4">
                       {item.number}
