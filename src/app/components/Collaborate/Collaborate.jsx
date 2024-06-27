@@ -13,7 +13,7 @@ import NextArrow from "@/../public/assets/icons/NextArrow/NextArrow";
 import PrevArrow from "../../../../public/assets/icons/PrevArrow/PrevArrow";
 import { collaborateData } from "@/app/components/Collaborate/data";
 import "./Collaborate.scss";
-export const textAnimated = {
+export const topAnimated = {
   hidden: {
     y: -300,
   },
@@ -33,8 +33,8 @@ const Collaborate = () => {
       id="partners"
     >
       <motion.div
-        variants={textAnimated}
-        className="text-center mx-auto mb-[70px]"
+        variants={topAnimated}
+        className="text-center mx-auto mb-[60px]"
       >
         <h2 className="title mb-9">
           Join our network of partners and be <br /> a part of innovative

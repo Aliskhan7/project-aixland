@@ -17,7 +17,7 @@ const blocksAnimated = {
 };
 const topAnimated = {
   hidden: {
-    y: "-145%",
+    y: "-200%",
   },
   visible: {
     y: 0,
@@ -29,8 +29,8 @@ const Benefits = () => {
     <motion.section
       initial="hidden"
       whileInView="visible"
-      viewport={{ amount: 0.3 }}
-      className="benefits pt-[112px] pb-[70px]"
+      viewport={{ amount: 0.4 }}
+      className="benefits pt-[35px] sm:pt-[112px] pb-[70px]"
       id="benefit"
     >
       <div className="mx-auto ">
