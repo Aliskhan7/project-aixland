@@ -39,8 +39,9 @@ const Footer = () => {
                 </div>
               </div>
               <p className="text-sm text-dark-200 max-w-[307px]">
-                The metaverse as a digital interface is designed combine the
-                physical world of real estate and
+                Join our network of partners and be a part of innovative
+                projects that are reshaping the future of real estate and
+                infrastructure management
               </p>
             </div>
             <div className="text-dark-200  text-[12px] flex justify-evenly absolute bottom-0 left-1/4">

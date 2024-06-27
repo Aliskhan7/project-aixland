@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import IconPlay from "../../../../../public/assets/icons/IconPlay/IconPlay";
 import IconPause from "../../../../../public/assets/icons/IconPause/IconPause";
 import { motion } from "framer-motion";
+import videoPoster from "@/../public/assets/videos/video-poster.gif";
 
 const topAnimated = {
   hidden: {
@@ -90,6 +91,7 @@ const Video = () => {
         ref={videoRef}
         className="mx-auto max-w-[858px] w-full rounded-xl"
         muted
+        poster="/assets/videos/video-poster.gif"
       >
         <source src="/assets/videos/animation_house.mp4" type="video/mp4" />
         <source src="/assets/videos/animation_house3.webm" type="video/webm" />
