@@ -2,7 +2,6 @@ import React, { useEffect, useRef, useState } from "react";
 import IconPlay from "../../../../../public/assets/icons/IconPlay/IconPlay";
 import IconPause from "../../../../../public/assets/icons/IconPause/IconPause";
 import { motion } from "framer-motion";
-import videoPoster from "@/../public/assets/videos/video-poster.gif";
 
 const topAnimated = {
   hidden: {

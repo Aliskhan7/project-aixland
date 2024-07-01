@@ -10,14 +10,16 @@ const Header = () => {
       <header className="xl:container px-4 xl:px-0 py-6 mx-auto flex justify-between items-center ">
         <Image src={logo} alt="Logo" />
         <Menu />
-        <Button
-          bg="bg-gray-100"
-          p="px-3 py-2"
-          classStyle="hover:bg-gray-200 duration-150 ease-in text-sm flex gap-x-2 items-center"
-        >
-          Sing in
-          <LinkArrow />
-        </Button>
+        <a href="https://aixland.io/demo/accounts/login/" target="_blank">
+          <Button
+            bg="bg-gray-100"
+            p="px-3 py-2"
+            classStyle="hover:bg-gray-200 duration-150 ease-in text-sm flex gap-x-2 items-center"
+          >
+            Sing in
+            <LinkArrow />
+          </Button>
+        </a>
       </header>
     </div>
   );
